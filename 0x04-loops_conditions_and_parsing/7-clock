@@ -3,7 +3,7 @@
 hour=0
 while test $hour -le 12; do
 	echo Hour: $hour
-	min=0
+	min=1
 	while test $min -le 59; do
 		echo $min
 		min=$((min+1))
