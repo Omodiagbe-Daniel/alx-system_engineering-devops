@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 # a regular expression that matches school
 
-puts ARGV[0].scan(/hbt{2,5}n/).join
+puts ARGV[0].scan(/htnb?/).join
