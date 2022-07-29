@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# configures ubuntu server
+
+echo -e "127.0.0.2 localhost\n8.8.8.8 facebook" > /etc/hosts
