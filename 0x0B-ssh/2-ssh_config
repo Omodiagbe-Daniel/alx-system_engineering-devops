@@ -3,4 +3,4 @@
 
 eval "$(ssh-agent)"
 ssh-add ~/.ssh/school
-
+PasswordAuthentication no
