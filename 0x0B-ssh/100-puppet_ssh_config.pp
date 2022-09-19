@@ -1,4 +1,4 @@
 #client config
-exec { 'echo "PasswordAuthentication no\nIdentityFile ~/.ssh/school" >> /etc/ssh/ssh_config':
+exec { 'echo "PasswordAuthentication no\nIdentityFile ~/.ssh/school" >> /.ssh/config':
         path    => '/bin/'
 }
