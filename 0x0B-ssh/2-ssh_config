@@ -2,5 +2,5 @@
 # configuring file for local ssh client
 
 eval "$(ssh-agent)"
-ssh-add ~/.ssh/school
-PasswordAuthentication no
+echo "IdentityFile ~/.ssh/school" >> /etc/ssh/ssh_config
+echo "PasswordAuthentication no" >> /etc/ssh/ssh_config
