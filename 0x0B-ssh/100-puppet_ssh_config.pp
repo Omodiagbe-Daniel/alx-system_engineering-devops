@@ -4,6 +4,6 @@ exec { 'ssh client config':
   path    => '/usr/bin'
 }
 exec { 'ssh client':
-  command => 'echo "~/.ssh/school" >> /etc/ssh/ssh_config',
+  command => 'echo "IndentityFile ~/.ssh/school" >> /etc/ssh/ssh_config',
   path    => '/usr/bin'
 }
