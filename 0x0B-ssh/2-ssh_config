@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # configuring file for local ssh client
-
-eval "$(ssh-agent)"
-echo "IdentityFile ~/.ssh/school" >> /etc/ssh/ssh_config
-echo "PasswordAuthentication no" >> /etc/ssh/ssh_config
+Host 34.236.190.169
+IdentityFile ~/.ssh/school
+PasswordAuthentication no
