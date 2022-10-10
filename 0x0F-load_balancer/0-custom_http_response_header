@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# installing Nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+echo "Hello World!" | sudo tee /var/www/html/index.html
+sudo sed -i "51i\\\t\tadd_header X-Server-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+sudo service nginx restart
