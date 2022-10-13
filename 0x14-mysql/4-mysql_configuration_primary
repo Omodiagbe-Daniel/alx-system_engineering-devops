@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # MYSQL primary configuration
-sudo sed "s/bind-address/#bind-address/g" /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo sed -i "s/bind-address/#bind-address/g" /etc/mysql/mysql.conf.d/mysqld.cnf
 str="server-id       = 1\nlog_bin         = /var/log/mysql/mysql-bin.log\nbinlog_do_db    = tyrell_corp"
-sudo sed "/log-error       = \/var\/log\/mysql\/error.log/a $str" /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo sed -i "/log-error       = \/var\/log\/mysql\/error.log/a $str" /etc/mysql/mysql.conf.d/mysqld.cnf
 sudo service mysql restart
