@@ -10,9 +10,8 @@ if __name__ == "__main__":
         user_url = "https://jsonplaceholder.typicode.com/users/" + argv[1]
         employe_name = requests.get(user_url)
         employee_name = employe_name.json().get("name")
-        task_url = "https://jsonplaceholder.\
-                typicode.com/todos?userId=" + argv[1]
-        task = requests.get(task_url)
+        url = "https://jsonplaceholder.typicode.com/todos?userId=" + argv[1]
+        task = requests.get(url)
         tasks = task.json()
         task_done = 0
         lists = []
