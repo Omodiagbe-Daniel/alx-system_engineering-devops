@@ -24,4 +24,4 @@ if __name__ == "__main__":
           str(task_done), str(20)))
 
     for z in range(len(lists)):
-        print("\t{}".format(lists[z]))
+        print("\t {}".format(lists[z]))
