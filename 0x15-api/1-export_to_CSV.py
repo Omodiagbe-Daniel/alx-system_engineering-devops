@@ -22,6 +22,6 @@ if __name__ == "__main__":
 
     with open('{}.csv'.format(id), "w", newline="") as csvfile:
         for row in lists:
-            print(row)
-            my_writer = csv.writer(csvfile, delimiter=',')
+            my_writer = csv.writer(csvfile,
+                                   quoting=csv.QUOTE_ALL, delimiter=',')
             my_writer.writerow(row)
