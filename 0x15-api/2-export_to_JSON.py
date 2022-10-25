@@ -21,7 +21,6 @@ if __name__ == "__main__":
                      i["completed"], "username": employee_name})
         lists.append(file_dict)
     json_dict = {id: lists}
-    print(json_dict)
 
     with open('{}.json'.format(id), "w", newline="") as jsonfile:
         json.dump(json_dict, jsonfile)
