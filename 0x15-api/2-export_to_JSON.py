@@ -16,11 +16,12 @@ if __name__ == "__main__":
     id = tasks[0].get("userId")
     task_done = 0
     lists = []
+    json_dict = {}
     for i in tasks:
         file_dict = ({"tasks": i["title"], "completed":
                      i["completed"], "username": employee_name})
         lists.append(file_dict)
-    json_dict = {id: lists}
+    json_dict[id] = lists
 
     with open('{}.json'.format(id), "w", newline="") as jsonfile:
         json.dump(json_dict, jsonfile)
