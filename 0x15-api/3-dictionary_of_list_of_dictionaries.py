@@ -23,16 +23,17 @@ if __name__ == "__main__":
     user_name = []
     for name in range(len(employee_name)):
         user_name.append(employee_name[name].get("username"))
-
     task_dict = {}
-    for i in range(len(user_name)):
+    count = 1
+    for i in user_name:
         task_file = []
         for j in tasks:
-            if j["userId"] == i + 1:
-                file_dict = ({"username": user_name[i], "task": j["title"],
+            if j["userId"] == count:
+                file_dict = ({"username": i, "task": j["title"],
                              "completed": j["completed"]})
-            task_file.append(file_dict)
-        task_dict[i + 1] = task_file
+                task_file.append(file_dict)
+        task_dict[count] = task_file
+        count += 1
 
     with open("todo_all_employees.json", "w", newline="") as jsonfile:
         json.dump(task_dict, jsonfile)
